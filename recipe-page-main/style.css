@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+:root {
+    --h2-text: hsl(14, 45%, 36%);
+    --h3-text: hsl(332, 51%, 32%);
+
+    --container-bg: hsl(0, 0%, 100%);
+    --max-screen-bg: hsl(330, 100%, 98%);
+    --card-bg: hsl(30, 54%, 90%);
+    --border-bottom: hsl(30, 18%, 87%);
+    --main-text: hsl(30, 10%, 34%);
+    --bold-dark-text: hsl(24, 5%, 18%);
+}
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit, san-serif';
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--main-text);
+    background: var(--container-bg);
+    margin: 0;
+}
+
+main { max-width: 26.562rem; }
+
+.ingredients-container,
+.instruction-container {
+    border-bottom: 1px solid var(--border-bottom);
+    padding: 1rem 0;
+}
+
+h1,
+h2 { 
+    font-family: 'Young Serif, san-serif'; 
+    font-weight: 400;
+}
+
+h2 { 
+    color: var(--h2-text); 
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--h3-text);
+    font-size: 1.2rem;
+    font-family: 'Outfit, san-serif';
+}
+
+.header-img { width: 100%; }
+
+.container-content { 
+    margin: 2rem 1rem;
+    display: grid;
+    gap: 1rem; 
+}
+
+.prepare-card {
+    background: var(--card-bg);
+    padding: 1.4rem;
+    border-radius: 1rem;
+}
+
+.preparation-list { margin-left: 1.6rem; }
+
+li { 
+    margin-top: 0.3rem;
+    font-weight: 400; 
+}
+
+.ingredient-list,
+.instruction-list { margin-left: 1.6rem; }
+
+.bold-text {
+    font-weight: 600;
+
+}
+
+.nutrition-label {
+    display: grid;
+    gap: 1rem;
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-bottom);
+    padding: 0.5rem 5rem;
+}
+
+.nutrition-item span {
+    float: right;
+    color: var(--h3-text);
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    body { background: var(--max-screen-bg); }
+
+    main {
+        margin: 3rem auto;
+        padding: 1rem;
+        background-color: var(--container-bg);
+        border-radius: 1rem;
+    }
+
+    .header-img { border-radius: 1rem; }
+}
